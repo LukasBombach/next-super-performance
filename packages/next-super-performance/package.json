@@ -5,5 +5,8 @@
   "license": "MIT",
   "peerDependencies": {
     "preact": "10.x"
+  },
+  "dependencies": {
+    "pool-attendant": "0.0.1"
   }
 }
