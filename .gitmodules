@@ -1,0 +1,3 @@
+[submodule "packages/preact"]
+	path = packages/preact
+	url = git@github.com:developit/preact.git
