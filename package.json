@@ -1,0 +1,11 @@
+{
+  "name": "next-super-performance",
+  "version": "0.0.1",
+  "repository": "git@github.com:spring-media/next-super-performance.git",
+  "author": "Lukas Bombach <lukas.bombach@googlemail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
