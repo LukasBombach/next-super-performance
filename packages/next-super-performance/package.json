@@ -1,0 +1,9 @@
+{
+  "name": "next-super-performance",
+  "version": "0.0.1",
+  "main": "lib/plugin.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "preact": "10.x"
+  }
+}
