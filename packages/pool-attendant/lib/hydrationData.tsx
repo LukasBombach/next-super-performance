@@ -27,6 +27,7 @@ function storeProps(name: string, props: any): string {
 
 function flushHydrationData(): string {
   const serializedHydrationData = JSON.stringify(hydrationData);
+  nextHydrationId = 0; // TODO this does not really reset
   hydrationData = {};
   return serializedHydrationData;
 }

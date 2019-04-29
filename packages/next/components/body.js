@@ -1,4 +1,7 @@
 import Teaser from "./teaser";
+import { hydrate } from "next-super-performance/hydration";
+
+const HydratedTeaser = hydrate(Teaser);
 
 export default function Body() {
   return (
@@ -14,8 +17,8 @@ export default function Body() {
       `}</style>
 
       <Teaser column={1} />
-      <Teaser column={2} />
-      <Teaser column={3} />
+      <HydratedTeaser column={2} />
+      <HydratedTeaser column={3} />
 
       <Teaser column={1} />
       <Teaser column={2} />
