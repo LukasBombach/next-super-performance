@@ -1,36 +1,37 @@
 import * as React from "react";
 
-export interface HydrationData {
-  [key: string]: ComponentData;
+export interface Data {
+  [key: string]: ComponentDataDescriptor;
 }
 
-export interface ComponentData {
+export interface ComponentDataDescriptor {
   name: string;
   props: any;
 }
 
-let nextHydrationId: number = 0;
-let hydrationData: HydrationData = {};
+export default class HydrationData extends React.Component {
+  private static nexHid: number = 0;
+  private static data: Data = {};
 
-const HydrationData: React.SFC<{}> = () => (
-  <script
-    type="application/hydration-data"
-    dangerouslySetInnerHTML={{ __html: flushHydrationData() }}
-  />
-);
+  public static storeProps(name: string, props: any): string {
+    const hid = (++HydrationData.nexHid).toString();
+    HydrationData.data[hid] = { name, props };
+    return hid;
+  }
 
-function storeProps(name: string, props: any): string {
-  const hydrationId = (++nextHydrationId).toString();
-  hydrationData[hydrationId] = { name, props };
-  return hydrationId;
+  private static flushHydrationData(): string {
+    const serializedHydrationData = JSON.stringify(HydrationData.data);
+    HydrationData.nexHid = 0;
+    HydrationData.data = {};
+    return serializedHydrationData;
+  }
+
+  render() {
+    return (
+      <script
+        type="application/hydration-data"
+        dangerouslySetInnerHTML={{ __html: HydrationData.flushHydrationData() }}
+      />
+    );
+  }
 }
-
-function flushHydrationData(): string {
-  const serializedHydrationData = JSON.stringify(hydrationData);
-  nextHydrationId = 0; // TODO this does not really reset
-  hydrationData = {};
-  return serializedHydrationData;
-}
-
-export default HydrationData;
-export { storeProps };
