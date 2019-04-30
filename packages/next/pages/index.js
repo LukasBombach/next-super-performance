@@ -2,8 +2,6 @@ import Header from "../components/header";
 import Body from "../components/body";
 import { HydrationData } from "next-super-performance/hydration";
 
-console.log(HydrationData);
-
 export default function Home() {
   return (
     <section>
