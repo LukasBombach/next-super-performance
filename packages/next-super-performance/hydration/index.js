@@ -1,4 +1,4 @@
-const { HydrationData, hydrate } = require("pool-attendant");
+const { HydrationData, withHydration } = require("pool-attendant");
 
 module.exports.HydrationData = HydrationData;
-module.exports.hydrate = hydrate;
+module.exports.withHydration = withHydration;

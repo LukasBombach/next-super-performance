@@ -1,7 +1,7 @@
 import Teaser from "./teaser";
-import { hydrate } from "next-super-performance/hydration";
+import { withHydration } from "next-super-performance/hydration";
 
-const HydratedTeaser = hydrate(Teaser);
+const HydratedTeaser = withHydration(Teaser);
 
 export default function Body() {
   return (
