@@ -1,5 +1,5 @@
 {
-  "name": "pool-attendant",
+  "name": "pool-attendant-preact",
   "version": "0.0.1",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -16,6 +16,6 @@
     "typescript": "3.4.5"
   },
   "peerDependencies": {
-    "react": "16.8.6"
+    "preact": "16.8.6"
   }
 }

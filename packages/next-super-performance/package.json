@@ -7,6 +7,7 @@
     "preact": "10.x"
   },
   "dependencies": {
-    "pool-attendant": "0.0.1"
+    "module-alias": "2.2.0",
+    "pool-attendant-react": "0.0.1"
   }
 }
