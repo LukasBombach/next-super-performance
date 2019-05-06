@@ -1,3 +1,19 @@
+const { Component } = require("preact");
 const preactCompat = require("preact/compat");
-// preactCompat.Suspense = props => props.children;
+
+class Suspense extends Component {
+  componentDidCatch(e) {
+    if (e && e.then) {
+      e.then(() => {
+        this.setState({});
+      });
+      throw e;
+    }
+  }
+  render(p) {
+    return p.children;
+  }
+}
+
+preactCompat.Suspense = Suspense;
 module.exports = preactCompat;

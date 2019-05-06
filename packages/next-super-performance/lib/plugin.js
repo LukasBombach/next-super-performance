@@ -1,6 +1,6 @@
 const path = require("path");
 
-const performance = (nextConfig = {}) => {
+/* const performance = (nextConfig = {}) => {
   return Object.assign({}, nextConfig, {
     webpack(config, options) {
       if (!options.isServer) replaceMainJs(config, "react");
@@ -23,7 +23,7 @@ const performanceWithNext = (nextConfig = {}) => {
         : config;
     }
   });
-};
+}; */
 
 const performanceWithNextOnServer = (nextConfig = {}) => {
   return Object.assign({}, nextConfig, {
@@ -68,4 +68,4 @@ function usePreactCompat(config) {
   });
 }
 
-module.exports = performance;
+module.exports = performanceWithNextOnServer;

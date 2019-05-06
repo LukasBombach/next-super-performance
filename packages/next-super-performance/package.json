@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "module-alias": "2.2.0",
-    "pool-attendant-react": "0.0.1"
+    "pool-attendant-preact": "0.0.1"
   }
 }

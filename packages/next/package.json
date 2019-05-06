@@ -12,7 +12,7 @@
   "dependencies": {
     "next": "8.1.0",
     "next-super-performance": "0.0.1",
-    "preact": "10.0.0-beta.0",
+    "preact": "./packages/preact",
     "preact-render-to-string": "4.1.0",
     "react": "16.8.6",
     "react-dom": "16.8.6"
