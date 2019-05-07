@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "main": "lib/plugin.js",
   "license": "MIT",
-  "peerDependencies": {
-    "preact": "10.x"
-  },
   "dependencies": {
     "module-alias": "2.2.0",
     "pool-attendant-preact": "0.0.1"
+  },
+  "peerDependencies": {
+    "preact": "10.x",
+    "preact-render-to-string": "5.x"
   }
 }

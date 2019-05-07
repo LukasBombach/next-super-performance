@@ -11,6 +11,7 @@ class Suspense extends Component {
     }
   }
   render(p) {
+    console.log(JSON.stringify(p));
     return p.children;
   }
 }
