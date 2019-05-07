@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "dev:server": "node server.js",
-    "start:server": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build"
   },
   "dependencies": {
