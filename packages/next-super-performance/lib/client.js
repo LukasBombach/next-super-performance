@@ -15,3 +15,9 @@ for (const marker of markers) {
   const props = data[id].props;
   render(<Teaser {...props} />, el.parentElement, el);
 }
+
+console.info(
+  "%cPool Attendant:",
+  "color: blue",
+  `Hydrated ${markers.length} components`
+);

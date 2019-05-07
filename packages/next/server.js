@@ -8,6 +8,6 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   createServer(handle).listen(port, () => {
-    console.log(`> [Server] Ready on http://localhost:${port}`);
+    console.log(`> Custom server ready on http://localhost:${port}`);
   });
 });

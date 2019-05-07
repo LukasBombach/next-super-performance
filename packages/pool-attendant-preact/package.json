@@ -16,6 +16,6 @@
     "typescript": "3.4.5"
   },
   "peerDependencies": {
-    "preact": "10.x"
+    "preact": ">=10.x"
   }
 }

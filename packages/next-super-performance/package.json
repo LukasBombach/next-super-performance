@@ -8,7 +8,7 @@
     "pool-attendant-preact": "0.0.1"
   },
   "peerDependencies": {
-    "preact": "10.x",
-    "preact-render-to-string": "5.x"
+    "preact": ">=10.x",
+    "preact-render-to-string": ">=5.x"
   }
 }

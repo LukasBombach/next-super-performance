@@ -1,1 +1,1 @@
-module.exports = () => Promise.resolve();
+module.exports = () => {};
