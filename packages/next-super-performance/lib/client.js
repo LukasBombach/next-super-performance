@@ -1,5 +1,5 @@
-import { h, render } from "preact";
-import Teaser from "../../next/components/teaser";
+import { render, createElement } from "preact";
+import Teaser from "../../app/components/teaser";
 
 const markers = [
   ...document.querySelectorAll('script[type="application/hydration-marker"]')
@@ -13,7 +13,7 @@ for (const marker of markers) {
   const el = marker.nextElementSibling;
   const id = marker.getAttribute("data-hid");
   const props = data[id].props;
-  render(<Teaser {...props} />, el.parentElement, el);
+  render(createElement(Teaser, props), el.parentElement, el);
 }
 
 console.info(

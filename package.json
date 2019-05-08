@@ -7,5 +7,13 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "wsrun --no-prefix -p app pool-attendant-preact -c dev",
+    "dev:app": "wsrun --no-prefix -p app -c dev",
+    "dev:pool": "wsrun --no-prefix -p pool-attendant-preact -c dev"
+  },
+  "dependencies": {
+    "wsrun": "3.6.5"
+  }
 }
