@@ -5,6 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "node",
+      "request": "launch",
+      "name": "yarn dev",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["dev"],
+      "cwd": "${workspaceFolder}/packages/next/",
+      "env": { "NODE_OPTIONS": "--inspect" },
+      "console": "integratedTerminal"
+    },
+    {
       "type": "chrome",
       "request": "launch",
       "name": "Next: Chrome",
@@ -15,12 +25,12 @@
       "type": "node",
       "request": "launch",
       "name": "Next: Node",
-      "runtimeArgs": ["dev:server"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
+      "cwd": "${workspaceFolder}/packages/next/",
       "env": { "NODE_OPTIONS": "--inspect" },
-      "port": 9229,
       "console": "integratedTerminal",
-      "runtimeExecutable": "${workspaceFolder}/packages/next/node_modules/next/dist/bin/next",
-      "cwd": "${workspaceFolder}/packages/next/"
+      "port": 9229
     }
   ],
   "compounds": [
