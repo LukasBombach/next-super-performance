@@ -9,6 +9,6 @@
   },
   "peerDependencies": {
     "preact": ">=10.x",
-    "preact-render-to-string": ">=5.x"
+    "preact-render-to-string": ">=5.0.3"
   }
 }
