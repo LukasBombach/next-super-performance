@@ -923,21 +923,6 @@
   resolved "https://registry.npmjs.org/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/react-dom@16.8.4":
-  version "16.8.4"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.8.4.tgz#7fb7ba368857c7aa0f4e4511c4710ca2c5a12a88"
-  integrity sha512-eIRpEW73DCzPIMaNBDP5pPIpK1KXyZwNgfxiVagb5iGiz6da+9A5hslSX6GAQKdO7SayVCS/Fr2kjqprgAvkfA==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*":
-  version "16.8.16"
-  resolved "https://registry.npmjs.org/@types/react/-/react-16.8.16.tgz#2bf980b4fb29cceeb01b2c139b3e185e57d3e08e"
-  integrity sha512-A0+6kS6zwPtvubOLiCJmZ8li5bm3wKIkoKV0h3RdMDOnCj9cYkUnj3bWbE03/lcICdQmwBmUfoFiHeNhbFiyHQ==
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
 "@types/react@16.8.14":
   version "16.8.14"
   resolved "https://registry.npmjs.org/@types/react/-/react-16.8.14.tgz#b561bfabeb8f60d12e6d4766367e7a9ae927aa18"
@@ -8051,10 +8036,10 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.5:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-preact-render-to-string@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.npmjs.org/preact-render-to-string/-/preact-render-to-string-5.0.2.tgz#f5220ac276f6b14737d735dddbe45947dc801241"
-  integrity sha512-2RFtynyc8O+JA1Rlt7cPAnBKpQCr2M3R9BUXcHFsG0o6+BUTf3HRtbiV/XdEBaFapOEk+OlCnfvDw1L00G/Lmw==
+preact-render-to-string@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npmjs.org/preact-render-to-string/-/preact-render-to-string-5.0.3.tgz#393f73826ad21097982e7ca1a4a03e256bd20422"
+  integrity sha512-FuaMTQXsn/RSQN0JphOpoqeSKEmHm83yLeZUioosgZkzdAyrAFDiAFy4cWUhjmaT371eEwpFZWcwiUHL4oLEUA==
   dependencies:
     pretty-format "^3.8.0"
 
