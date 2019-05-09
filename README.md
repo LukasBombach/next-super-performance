@@ -153,7 +153,7 @@ server and be found in your HTML on the client. So `<HydratedTeaser column={2} /
 ```jsx
 <Fragment>
   <script type="application/hydration-marker" />
-  <HydratedTeaser column={2} />
+  <Teaser column={2} />
 </Fragment>
 ```
 
