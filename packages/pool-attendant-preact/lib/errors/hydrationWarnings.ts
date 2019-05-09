@@ -56,7 +56,7 @@ function getComponentsMissingInData<P>(
   const dataValues = Object.values(data);
   const compExistsInData = (comp: ComponentType<P>) =>
     dataValues.some(({ name }) => name === getName(comp));
-  return components.filter((comp: ComponentType<P>) => compExistsInData(comp));
+  return components.filter((comp: ComponentType<P>) => !compExistsInData(comp));
 }
 
 function getUnmarkedComponents<P>(
@@ -67,7 +67,7 @@ function getUnmarkedComponents<P>(
   const compNames = components.map(comp => getName(comp));
   const nameExistsInComps = (name: string) =>
     compNames.some(compName => name === compName);
-  return dataValues.filter(({ name }: ComponentDataDescriptor<P>) =>
-    nameExistsInComps(name)
+  return dataValues.filter(
+    ({ name }: ComponentDataDescriptor<P>) => !nameExistsInComps(name)
   );
 }
