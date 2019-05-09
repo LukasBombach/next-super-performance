@@ -127,17 +127,7 @@ const HydratedTeaser = withHydration(Teaser);
 
 export default function Body() {
   return (
-    <main id="main-container">
-      <style jsx>{`
-        main {
-          display: grid;
-          grid-gap: 2%;
-          grid-template-columns: 32% 32% 32%;
-          color: #444;
-          padding: 10px;
-        }
-      `}</style>
-
+    <main>
       <Teaser column={1} />
       <HydratedTeaser column={2} />
       <HydratedTeaser column={3} />
