@@ -1,7 +1,7 @@
 {
   "name": "next-super-performance",
   "version": "0.0.1",
-  "main": "lib/plugin.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
     "module-alias": "2.2.0",

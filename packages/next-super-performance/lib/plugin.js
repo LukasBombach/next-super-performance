@@ -1,6 +1,6 @@
 const path = require("path");
 
-const performanceWithNextOnServer = (nextConfig = {}) => {
+const plugin = (nextConfig = {}) => {
   return Object.assign({}, nextConfig, {
     webpack(config, options) {
       if (!options.defaultLoaders) throwVersionError();
@@ -26,7 +26,7 @@ function useReactAsExternals(config) {
 
 function replaceMainJs(config) {
   config.entry = config.entry().then(entry => {
-    entry["static/runtime/main.js"] = path.resolve(__dirname, "client.js");
+    entry["static/runtime/main.js"] = getPathToClientJs();
     return entry;
   });
 }
@@ -40,4 +40,13 @@ function usePreactCompat(config) {
   });
 }
 
-module.exports = performanceWithNextOnServer;
+function getPathToClientJs(filename = "client.js") {
+  // TODO it seems we cannot access fs const fs = require("fs");
+  // const userClientJsPath = path.resolve(process.cwd(), filename);
+  // const defaultClientJsPath = path.resolve(__dirname, filename);
+  // const userClientJsExists = fs.existsSync(userClientJsPath);
+  // return userClientJsExists ? userClientJsPath : defaultClientJsPath;
+  return path.resolve(process.cwd(), filename);
+}
+
+module.exports = plugin;

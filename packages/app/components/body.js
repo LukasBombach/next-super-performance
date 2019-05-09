@@ -1,5 +1,5 @@
 import Teaser from "./teaser";
-import { withHydration } from "next-super-performance/hydration";
+import { withHydration } from "next-super-performance";
 
 const HydratedTeaser = withHydration(Teaser);
 

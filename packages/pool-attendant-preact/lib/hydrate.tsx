@@ -1,34 +1,31 @@
-import { h, render, ComponentType, RenderableProps } from "preact";
-import name from "./getComponentName";
-import { HydrationDataDescriptor } from "./hydrationData";
-
-interface ComponentMap {
-  [name: string]: ComponentType<RenderableProps<any>>;
-}
+import { h, render, ComponentType } from "preact";
+import showHydrationWarnings from "./errors/hydrationWarnings";
+import {
+  getMarkers,
+  getData,
+  getComponentMap,
+  readMarker,
+  getComponent,
+  getProps,
+  DATA_SELECTOR
+} from "./util";
 
 export default function hydrate<P>(
   components: ComponentType<P>[] = [],
   container: Element | Document = document
 ) {
-  const markers: Element[] = Array.from(
-    container.querySelectorAll('script[type="application/hydration-marker"]')
-  );
+  const markers = getMarkers(container);
+  const dataScript = container.querySelector(DATA_SELECTOR);
+  const data = getData(dataScript);
+  const componentMap = getComponentMap(components);
 
-  const data: HydrationDataDescriptor<any> = JSON.parse(
-    container.querySelector('script[type="application/hydration-data"]')!
-      .innerHTML
-  );
-
-  const componentMap: ComponentMap = components.reduce(
-    (map, comp) => ({ ...map, [name(comp)]: comp }),
-    {}
-  );
+  // TODO import and run this in DEV env only
+  showHydrationWarnings(dataScript, data, components, markers);
 
   for (const marker of markers) {
-    const el: Element = marker.nextElementSibling as Element;
-    const id: string = marker.getAttribute("data-hid") as string;
-    const props: RenderableProps<ComponentType<any>> = data[id].props;
-    const Comp: ComponentType<any> = componentMap[data[id].name];
-    render(<Comp {...props} />, el.parentElement as HTMLElement, el);
+    const { id, el, parent } = readMarker(marker);
+    const Component = getComponent(componentMap, data, id);
+    const props = getProps(data, id);
+    if (Component) render(<Component {...props} />, parent, el);
   }
 }

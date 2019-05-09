@@ -1,6 +1,6 @@
 import Header from "../components/header";
 import Body from "../components/body";
-import { HydrationData } from "next-super-performance/hydration";
+import { HydrationData } from "next-super-performance";
 
 export default function Home() {
   return (

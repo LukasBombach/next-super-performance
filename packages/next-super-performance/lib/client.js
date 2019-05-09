@@ -1,3 +1,4 @@
+/* 
 import { render, createElement } from "preact";
 import Teaser from "../../app/components/teaser";
 
@@ -21,3 +22,8 @@ console.info(
   "color: blue",
   `Hydrated ${markers.length} components`
 );
+
+*/
+
+// TODO this should be called in DEV env only
+console.warn("Please provide a `client.js` file in your root directory");
