@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next:performance dev",
     "start": "next:performance start",
-    "build": "next build",
-    "dev-asd": "../next-super-performance/bin/performance.js dev"
+    "build": "next build"
   },
   "dependencies": {
     "next": "8.1.0",

@@ -64,3 +64,26 @@ Let's explain this by example. Say you have a Next app with a `header`, a `main`
 try and make the teasers 2 & 3 dynamic (just to pick some items on the page) and leave the rest static.
 
 Here is how you would do it:
+
+Install next-super-performance
+
+```console
+npm i next-super-performance --save
+```
+
+Create a `next.config.js` and use the plugin
+
+```js
+const withSuperPerformance = require("next-super-performance");
+module.exports = withSuperPerformance();
+```
+
+Modify your `package.json` to make Next use Preact properly ([this will alias `react` to `preact` and then start the original next scripts without modification](./packages/next-super-performance/bin/index.js)):
+
+```js
+  "scripts": {
+    "dev": "next:performance dev",
+    "start": "next:performance start",
+    "build": "next:performance build"
+  },
+```
