@@ -21,3 +21,13 @@ say, the bigger your bundle, the worse your performance.
 <br/>
 
 That is why we aim to cut bundle size by only shipping the code we actually need in the client and leave the rest to server side rendering.
+
+## Overview
+
+This repo ist still a proof of concept, we will continue to work on this and implement our work
+as 2 packages:
+
+- `pool-attendant-preact` A library that implements partialy hydration with preact x
+- `next-super-performace` A Next.js plugin that uses pool-attendant-preact to improve client side performance
+
+On top of partial hydration we will implement loading strategies including `critical CSS`, `critical JS`, `lazy loading`, `preloading ressources`, etc. as part of next-super-performace.
