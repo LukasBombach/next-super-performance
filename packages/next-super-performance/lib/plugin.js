@@ -40,13 +40,9 @@ function usePreactCompat(config) {
   });
 }
 
-function getPathToClientJs(filename = "client.js") {
-  // TODO it seems we cannot access fs const fs = require("fs");
-  // const userClientJsPath = path.resolve(process.cwd(), filename);
-  // const defaultClientJsPath = path.resolve(__dirname, filename);
-  // const userClientJsExists = fs.existsSync(userClientJsPath);
-  // return userClientJsExists ? userClientJsPath : defaultClientJsPath;
-  return path.resolve(process.cwd(), filename);
+// TODO This is hardcoded in the first draft, we'll have to see about customization later
+function getPathToClientJs() {
+  return path.resolve(process.cwd(), "client.js");
 }
 
 module.exports = plugin;
