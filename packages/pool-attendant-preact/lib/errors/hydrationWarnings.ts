@@ -49,6 +49,7 @@ export default function showHydrationWarnings<P>(
   }
 }
 
+// TODO this does not really work yet
 function getComponentsMissingInData<P>(
   data: HydrationDataDescriptor<any>,
   components: ComponentType<P>[]
@@ -59,6 +60,7 @@ function getComponentsMissingInData<P>(
   return components.filter((comp: ComponentType<P>) => !compExistsInData(comp));
 }
 
+// TODO this does not really work yet
 function getUnmarkedComponents<P>(
   data: HydrationDataDescriptor<any>,
   components: ComponentType<P>[]
