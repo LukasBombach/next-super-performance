@@ -31,3 +31,24 @@ as 2 packages:
 - `next-super-performace` A Next.js plugin that uses pool-attendant-preact to improve client side performance
 
 On top of partial hydration we will implement loading strategies including `critical CSS`, `critical JS`, `lazy loading`, `preloading ressources`, etc. as part of next-super-performace.
+
+## Documentation
+
+For now we have a partial hydration POC for Next.js and this is how it works. When you create a `next.config.js` and use our plugin like so
+
+```js
+const withSuperPerformance = require("next-super-performance");
+module.exports = withSuperPerformance();
+```
+
+2 things will happen:
+
+- `React` will be replaced by `Preact` because it is only 3KB
+- Next.js' main client JavaScript file will be discarded and replaced by a JavaScript file in your control
+
+That means you have to create a `client.js` in your app's root folder that will act as the entry
+point for the JavaScript that will be sent to the client. We do this to give you full control of
+what you want your users to download and, very importantly, to choose the loading strategy that is
+right for you.
+
+Now `pool-attendant-preact` comes into play.
