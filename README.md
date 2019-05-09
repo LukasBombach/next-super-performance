@@ -20,4 +20,4 @@ say, the bigger your bundle, the worse your performance.
 
 <br/>
 
-_That is why we aim to cut bundle size by only shipping the code we actually need in the client and leave the rest to server side rendering._
+That is why we aim to cut bundle size by only shipping the code we actually need in the client and leave the rest to server side rendering.
