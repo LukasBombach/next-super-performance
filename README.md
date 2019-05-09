@@ -56,3 +56,9 @@ Now `pool-attendant-preact` comes into play. pool-attendant-preact exports 3 API
 - `withHydration` a HOC that lets you mark your components for hydration
 - `hydrate` a function to hydrate marked components in the client
 - `HydrationData` a component that writes serialized props to the client, like `NEXT_DATA`
+
+<img src="./docs/images/dyncamic-teaers.png" align="left"
+     title="Dynamic elements in a static page" width="430">
+
+Let's explain this by example. Say you have a Next app with a `header`, a `main` section and `teaser`s,
+which are just headlines with a text snippet:
