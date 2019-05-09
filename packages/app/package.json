@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
-    "build": "next build"
+    "dev": "next:performance dev",
+    "start": "next:performance start",
+    "build": "next build",
+    "dev-asd": "../next-super-performance/bin/performance.js dev"
   },
   "dependencies": {
     "next": "8.1.0",

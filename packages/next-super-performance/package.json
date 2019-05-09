@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "main": "lib/index.js",
   "license": "MIT",
+  "bin": {
+    "next:performance": "bin/index.js"
+  },
   "dependencies": {
     "module-alias": "2.2.0",
+    "npm": "6.9.0",
     "pool-attendant-preact": "0.0.1"
   },
   "peerDependencies": {
