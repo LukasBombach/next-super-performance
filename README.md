@@ -147,6 +147,16 @@ export default function Body() {
 In line 4 we have created a component that will be hydrated in the client and we use it 2 times
 on our page with different props.
 
+`withHydration` will prepend your component with a _marker_ so that it can be rendered on the
+server and be found in your HTML on the client. So `<HydratedTeaser column={2} />` will become
+
+```jsx
+<Fragment>
+  <script type="application/hydration-marker" />
+  <HydratedTeaser column={2} />
+</Fragment>
+```
+
 The last and most crucial part is your `client.js` which is the code that will ship to your users
 and which is where you will hydrate your components. For a single component (`Teaser`) it can be
 simple as that.
