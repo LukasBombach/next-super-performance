@@ -60,5 +60,7 @@ Now `pool-attendant-preact` comes into play. pool-attendant-preact exports 3 API
 <img src="./docs/images/dyncamic-teaers.png" align="left"
      title="Dynamic elements in a static page" width="430">
 
-Let's explain this by example. Say you have a Next app with a `header`, a `main` section and `teaser`s,
-which are just headlines with a text snippet:
+Let's explain this by example. Say you have a Next app with a `header`, a `main` section and `teaser`s (which may just be images with a text and a headline, for instance). For the sake of this example, let's
+try and make the teasers 2 & 3 dynamic (just to pick some items on the page) and leave the rest static.
+
+Here is how you would do it:
