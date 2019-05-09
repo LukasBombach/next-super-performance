@@ -18,4 +18,6 @@ say, the bigger your bundle, the worse your performance.
 
 ---
 
+<br/>
+
 That is why we aim to cut bundle size by only shipping the code we actually need in the client.
