@@ -28,9 +28,9 @@ This repo ist still a proof of concept, we will continue to work on this and imp
 as 2 packages:
 
 - `pool-attendant-preact` A library that implements partialy hydration with preact x
-- `next-super-performace` A Next.js plugin that uses pool-attendant-preact to improve client side performance
+- `next-super-performance` A Next.js plugin that uses pool-attendant-preact to improve client side performance
 
-On top of partial hydration we will implement loading strategies including `critical CSS`, `critical JS`, `lazy loading`, `preloading ressources`, etc. as part of next-super-performace.
+On top of partial hydration we will implement loading strategies including `critical CSS`, `critical JS`, `lazy loading`, `preloading ressources`, etc. as part of next-super-performance.
 
 ## Documentation
 
@@ -51,4 +51,8 @@ point for the JavaScript that will be sent to the client. We do this to give you
 what you want your users to download and, very importantly, to choose the loading strategy that is
 right for you.
 
-Now `pool-attendant-preact` comes into play.
+Now `pool-attendant-preact` comes into play. pool-attendant-preact exports 3 APIs for you:
+
+- `withHydration` a HOC that lets you mark your components for hydration
+- `hydrate` a function to hydrate marked components in the client
+- `HydrationData` a component that writes serialized props to the client, like `NEXT_DATA`
