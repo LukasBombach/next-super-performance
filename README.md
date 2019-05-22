@@ -188,7 +188,23 @@ as well because `client.js` is your entry and every dependendcy will be resolved
 This repo is a POC and something we will build on. To try this out, clone this repository and then run
 
 ```console
-yarn && yarn dev
+# Init Preact Git Sumodule
+git submodule init
+git submodule update
+
+# Install dependencies
+yarn
+
+# Build Preact
+cd packages/preact
+yarn build
+
+# cd to the app dir
+cd ...
+cd packages/app
+
+# run the app
+yarn dev
 ```
 
 ## Conclusion
