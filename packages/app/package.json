@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next:performance dev",
     "start": "next:performance start",
-    "build": "next build"
+    "build": "next:performance build"
   },
   "dependencies": {
     "next": "8.1.0",
