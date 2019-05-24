@@ -7,36 +7,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "yarn dev",
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["dev"],
-      "cwd": "${workspaceFolder}/packages/app/",
-      "env": { "NODE_OPTIONS": "--inspect" },
-      "console": "integratedTerminal"
-    },
-    {
-      "type": "chrome",
-      "request": "launch",
-      "name": "Next: Chrome",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "Next: Node",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["server.js"],
-      "cwd": "${workspaceFolder}/packages/app/",
+      "runtimeArgs": ["../next-super-performance/bin/index.js"],
+      "cwd": "${workspaceFolder}/packages/app",
       "env": { "NODE_OPTIONS": "--inspect" },
       "console": "integratedTerminal",
       "port": 9229
-    }
-  ],
-  "compounds": [
-    {
-      "name": "Next: Full",
-      "configurations": ["Next: Node", "Next: Chrome"]
     }
   ]
 }
