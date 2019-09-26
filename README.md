@@ -187,7 +187,7 @@ as well because `client.js` is your entry and every dependendcy will be resolved
 
 This repo is a POC and something we will build on. To try this out, clone this repository and then run
 
-```console
+```sh
 # Init Preact Git Sumodule
 git submodule init
 git submodule update
@@ -197,6 +197,13 @@ yarn
 
 # Build Preact
 cd packages/preact
+yarn build
+
+# Build the pool-attendant-preact package
+# └─ cd to the pool-attendant-preact dir
+cd ...
+cd packages/pool-attendant-preact
+# └─ build the package
 yarn build
 
 # cd to the app dir
